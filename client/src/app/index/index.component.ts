@@ -5,11 +5,11 @@ import { RouterOutlet } from '@angular/router';
 @Component({
     standalone: true,
     imports: [CommonModule, RouterOutlet],
-    templateUrl: "./home.component.html",
-    styleUrl: "./home.component.scss"
+    templateUrl: "./index.component.html",
+    styleUrl: "./index.component.scss"
 })
 
-export class HomeComponet {
+export class IndexComponet {
     constructor(){
         
     }

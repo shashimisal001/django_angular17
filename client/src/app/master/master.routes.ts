@@ -1,8 +1,17 @@
 import { Routes } from '@angular/router';
-import { HomeComponet } from '../home/home.component';
-import { ProductsComponent } from '../products/products.component';
+import { IndexComponet } from '../index/index.component';
 
 export const routes: Routes = [
-    { path: "", component: HomeComponet },
-    { path: "products", component: ProductsComponent }
+  {
+    path: "",
+    component: IndexComponet,
+    data: {
+      title: "Shop in style",
+      subtitle: "With this shop hompeage template"
+    }
+  },
+  {
+    path: "products",
+    loadChildren: () => import('../products/products.routes').then(r => r.routes)
+  }
 ];

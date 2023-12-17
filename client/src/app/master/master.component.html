@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <title>Angular App - I am in Master</title>
-    <h3>Header - I am in Master</h3>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shop Homepage - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    </head>
     <body>
-        <!-- This will load other content pages -->
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" [routerLink]="['/products']">All products page</a></li>
+                        <li class="nav-item"><a class="nav-link" [routerLink]="['/products/detail']">Product detail page</a></li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">{{pageMeta["title"]}}</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">{{ pageMeta["subtitle"] }}</p>
+                </div>
+            </div>
+        </header>
+
         <router-outlet></router-outlet>
+        
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023. Developed by Shashikumar Misal.</p></div>
+        </footer>
     </body>
-    <footer>
-        <h3>Footer - I am also in Master</h3>
-    </footer>
 </html>

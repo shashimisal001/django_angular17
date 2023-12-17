@@ -5,9 +5,9 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   standalone: true,
   imports: [CommonModule, RouterOutlet],
-  templateUrl: './products.component.html',
-  styleUrl: './products.component.scss'
+  templateUrl: './product-detail.component.html',
+  styleUrl: './product-detail.component.scss'
 })
-export class ProductsComponent {
-  title = 'Products page';
+export class ProductDetailComponent {
+
 }
